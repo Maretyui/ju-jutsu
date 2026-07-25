@@ -16,6 +16,13 @@ export const metadata: Metadata = {
   title: "Ju-Jutsu Quickborn",
   description:
     "Ju-Jutsu Quickborn — Selbstverteidigung und Kampfsport für alle Altersgruppen.",
+  openGraph: {
+    title: "Ju-Jutsu Quickborn",
+    description:
+      "Ju-Jutsu Quickborn — Selbstverteidigung und Kampfsport für alle Altersgruppen.",
+    type: "website",
+    locale: "de_DE",
+  },
 };
 
 export default function RootLayout({
