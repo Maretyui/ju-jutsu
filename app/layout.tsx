@@ -23,6 +23,12 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
   },
+  twitter: {
+    card: "summary",
+    title: "Ju-Jutsu Quickborn",
+    description:
+      "Ju-Jutsu Quickborn — Selbstverteidigung und Kampfsport für alle Altersgruppen.",
+  },
 };
 
 export const viewport: Viewport = {
