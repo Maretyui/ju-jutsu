@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Tell the browser both schemes are supported so native UI (scrollbars,
+     form controls) follows the same light/dark switch as the page colors
+     below, instead of staying light-styled on a dark background. */
+  color-scheme: light dark;
 }
 
 @theme inline {
