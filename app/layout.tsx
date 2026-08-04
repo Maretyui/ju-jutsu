@@ -16,6 +16,16 @@ export const metadata: Metadata = {
   title: "Ju-Jutsu Quickborn",
   description:
     "Ju-Jutsu Quickborn — Selbstverteidigung und Kampfsport für alle Altersgruppen.",
+  keywords: [
+    "Ju-Jutsu Quickborn",
+    "Ju-Jutsu",
+    "Kampfsport Quickborn",
+    "Selbstverteidigung Quickborn",
+    "Judo",
+    "Karate",
+    "Ringen",
+    "Kampfkunst",
+  ],
   openGraph: {
     title: "Ju-Jutsu Quickborn",
     description:
