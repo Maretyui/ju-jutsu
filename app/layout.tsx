@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     title: "Ju-Jutsu Quickborn",
     description:
       "Ju-Jutsu Quickborn — Selbstverteidigung und Kampfsport für alle Altersgruppen.",
+    siteName: "Ju-Jutsu Quickborn",
     type: "website",
     locale: "de_DE",
   },
