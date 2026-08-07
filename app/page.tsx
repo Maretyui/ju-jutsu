@@ -4,7 +4,7 @@ export default function Home() {
       <main className="flex flex-col items-center gap-6 text-center max-w-2xl">
         <header>
           <p className="text-sm uppercase tracking-[0.2em] text-foreground/60">
-            Release v1
+            Kampfsport Quickborn
           </p>
           <h1 className="text-5xl sm:text-6xl font-bold tracking-tight">
             Ju-Jutsu Quickborn
