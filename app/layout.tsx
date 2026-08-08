@@ -40,6 +40,9 @@ export const metadata: Metadata = {
     description:
       "Ju-Jutsu Quickborn — Selbstverteidigung und Kampfsport für alle Altersgruppen.",
   },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export const viewport: Viewport = {
