@@ -43,6 +43,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  formatDetection: {
+    telephone: false,
+  },
 };
 
 export const viewport: Viewport = {
