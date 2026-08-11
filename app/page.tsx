@@ -1,3 +1,5 @@
+// Placeholder copy — replace once Training, Standort and Ansprechpartner
+// details are confirmed (keep app/layout.tsx's metadata/OG/twitter text in sync).
 export default function Home() {
   return (
     <div className="grid min-h-screen items-center justify-items-center p-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
