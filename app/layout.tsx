@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     "Ringen",
     "Kampfkunst",
   ],
+  authors: [{ name: "Maik Reinhardt" }],
+  creator: "Maik Reinhardt",
+  robots: { index: true, follow: true },
   openGraph: {
     title: "Ju-Jutsu Quickborn",
     description:
