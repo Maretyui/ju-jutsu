@@ -35,3 +35,15 @@ body {
   outline: 2px solid var(--foreground);
   outline-offset: 2px;
 }
+
+/* Defensive baseline: once real content (nav, animated sections, etc.)
+   replaces this placeholder page, this keeps any future scroll/transition
+   effects from running for users who've asked the OS for reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
