@@ -24,7 +24,9 @@ export default function Home() {
           </p>
         </main>
       </div>
-      <footer className="pb-6 text-center text-xs text-foreground/40">
+      {/* /60 (not /40) so this small text still clears WCAG AA's 4.5:1
+          contrast minimum against both the light and dark background. */}
+      <footer className="pb-6 text-center text-xs text-foreground/60">
         Design &amp; Umsetzung:{" "}
         <a
           href="https://maretyui.com"
