@@ -12,10 +12,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Kept as constants so the title/description can't drift out of sync
+// across the base, OpenGraph and Twitter metadata blocks below.
+const SITE_TITLE = "Ju-Jutsu Quickborn";
+const SITE_DESCRIPTION =
+  "Ju-Jutsu Quickborn — Selbstverteidigung und Kampfsport für alle Altersgruppen.";
+
 export const metadata: Metadata = {
-  title: "Ju-Jutsu Quickborn",
-  description:
-    "Ju-Jutsu Quickborn — Selbstverteidigung und Kampfsport für alle Altersgruppen.",
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
   keywords: [
     "Ju-Jutsu Quickborn",
     "Ju-Jutsu",
@@ -30,18 +35,16 @@ export const metadata: Metadata = {
   creator: "Maik Reinhardt",
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Ju-Jutsu Quickborn",
-    description:
-      "Ju-Jutsu Quickborn — Selbstverteidigung und Kampfsport für alle Altersgruppen.",
-    siteName: "Ju-Jutsu Quickborn",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    siteName: SITE_TITLE,
     type: "website",
     locale: "de_DE",
   },
   twitter: {
     card: "summary",
-    title: "Ju-Jutsu Quickborn",
-    description:
-      "Ju-Jutsu Quickborn — Selbstverteidigung und Kampfsport für alle Altersgruppen.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
   },
   alternates: {
     canonical: "/",
