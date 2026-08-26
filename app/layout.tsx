@@ -18,6 +18,9 @@ const SITE_TITLE = "Ju-Jutsu Quickborn";
 const SITE_DESCRIPTION =
   "Ju-Jutsu Quickborn — Selbstverteidigung und Kampfsport für alle Altersgruppen.";
 
+// No metadataBase here (unlike sibling repos such as darkinvaderr/
+// kirchliche-pilgerplaetze) — this site has no confirmed live domain yet,
+// see the README's placeholder-status note. Add it once one exists.
 export const metadata: Metadata = {
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
