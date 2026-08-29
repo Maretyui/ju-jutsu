@@ -24,6 +24,10 @@ const SITE_DESCRIPTION =
 export const metadata: Metadata = {
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
+  // Used by browsers/OSes as the short display name when a user pins or
+  // bookmarks the page (e.g. "Add to Home Screen"), separate from the
+  // longer <title> text above.
+  applicationName: SITE_TITLE,
   keywords: [
     "Ju-Jutsu Quickborn",
     "Ju-Jutsu",
