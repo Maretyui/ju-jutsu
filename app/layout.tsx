@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "Ringen",
     "Kampfkunst",
   ],
-  authors: [{ name: "Maik Reinhardt" }],
+  authors: [{ name: "Maik Reinhardt", url: "https://maretyui.com" }],
   creator: "Maik Reinhardt",
   robots: { index: true, follow: true },
   openGraph: {
