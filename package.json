@@ -2,6 +2,7 @@
   "name": "@maretyui/ju-jutsu",
   "version": "1.0.0",
   "private": true,
+  "description": "Placeholder site for a Ju-Jutsu club.",
   "author": "Maik Reinhardt",
   "scripts": {
     "dev": "next dev --turbopack",
