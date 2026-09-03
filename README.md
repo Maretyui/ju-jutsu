@@ -18,10 +18,13 @@ The placeholder homepage copy lives in `app/page.tsx`; page title/description/ke
 ```
 app/
 ├── layout.tsx    # <html> shell, fonts, metadata/OG/Twitter/viewport config
+├── manifest.ts   # Web app manifest (name/icons/theme-color), served at /manifest.webmanifest
 ├── page.tsx      # Homepage content (currently the placeholder copy above)
 ├── globals.css   # Tailwind import, color-scheme vars, focus-visible + reduced-motion baseline
 └── favicon.ico
 ```
+
+`app/manifest.ts` backs up `layout.tsx`'s `applicationName` metadata with a real web manifest (Next.js auto-serves it at `/manifest.webmanifest` and links it in `<head>`) — update its `name`/`short_name`/`description` alongside the other metadata fields if the club's copy changes.
 
 ## Accessibility
 
