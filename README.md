@@ -28,7 +28,7 @@ app/
 
 ## Accessibility
 
-`app/globals.css` restores a visible `:focus-visible` outline (Tailwind v4 removes the browser default) so keyboard navigation stays visible without adding a ring on mouse clicks, declares `color-scheme: light dark` (mirrored as an actual meta tag via `app/layout.tsx`'s `viewport` export) so native UI follows the page's light/dark switch, and includes a `prefers-reduced-motion: reduce` baseline that zeroes out animation/transition durations for any future animated content. The footer credit link uses `text-foreground/60` rather than a lighter opacity specifically to clear WCAG AA's 4.5:1 contrast minimum against both the light and dark background — re-check contrast rather than assuming a different opacity value is safe if that text is ever restyled.
+`app/globals.css` restores a visible `:focus-visible` outline (Tailwind v4 removes the browser default) so keyboard navigation stays visible without adding a ring on mouse clicks, declares `color-scheme: light dark` (mirrored as an actual meta tag via `app/layout.tsx`'s `viewport` export) so native UI follows the page's light/dark switch, and includes a `prefers-reduced-motion: reduce` baseline that zeroes out animation/transition durations for any future animated content. It also restyles `::selection` to use the page's own foreground/background colors instead of the browser's default blue, so highlighted text stays legible and on-brand in both light and dark mode. The footer credit link uses `text-foreground/60` rather than a lighter opacity specifically to clear WCAG AA's 4.5:1 contrast minimum against both the light and dark background — re-check contrast rather than assuming a different opacity value is safe if that text is ever restyled.
 
 ## Getting Started
 
