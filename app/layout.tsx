@@ -72,6 +72,17 @@ export const viewport: Viewport = {
   ],
 };
 
+// Basic Organization structured data so search engines can associate the
+// club's name/description with an entity even before the real page content
+// ships. No `url` field yet since there's no confirmed live domain (see the
+// metadataBase note above) — add one once a domain exists.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -82,6 +93,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
