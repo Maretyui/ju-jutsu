@@ -24,9 +24,9 @@ app/
 └── favicon.ico
 ```
 
-`app/manifest.ts` backs up `layout.tsx`'s `applicationName` metadata with a real web manifest (Next.js auto-serves it at `/manifest.webmanifest` and links it in `<head>`) — update its `name`/`short_name`/`description` alongside the other metadata fields if the club's copy changes.
+`app/manifest.ts` backs up `layout.tsx`'s `applicationName` metadata with a real web manifest (Next.js auto-serves it at `/manifest.webmanifest` and links it in `<head>`) — update its `name`/`short_name`/`description` alongside the other metadata fields if the club's copy changes. Its `categories` field (`["sports", "health"]`) lets app stores/PWA installers categorize the site correctly.
 
-`app/layout.tsx` also emits a small `Organization` JSON-LD block (name/description, sourced from the same `SITE_TITLE`/`SITE_DESCRIPTION` constants) so search engines have structured data to work with even before the real page content ships. It deliberately omits a `url` field until a confirmed live domain exists — add one alongside `metadataBase` at that point.
+`app/layout.tsx` also emits a small `SportsOrganization` JSON-LD block (a schema.org subtype of the generic `Organization` type, plus a `sport` field) so search engines have structured data to work with even before the real page content ships. It deliberately omits a `url` field until a confirmed live domain exists — add one alongside `metadataBase` at that point.
 
 ## Accessibility
 
