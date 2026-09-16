@@ -72,15 +72,18 @@ export const viewport: Viewport = {
   ],
 };
 
-// Basic Organization structured data so search engines can associate the
-// club's name/description with an entity even before the real page content
-// ships. No `url` field yet since there's no confirmed live domain (see the
-// metadataBase note above) — add one once a domain exists.
+// Basic structured data so search engines can associate the club's
+// name/description with an entity even before the real page content ships.
+// SportsOrganization (a schema.org subtype of Organization) is more
+// specific than the generic type for a martial arts club. No `url` field
+// yet since there's no confirmed live domain (see the metadataBase note
+// above) — add one once a domain exists.
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "SportsOrganization",
   name: SITE_TITLE,
   description: SITE_DESCRIPTION,
+  sport: "Ju-Jutsu",
 };
 
 export default function RootLayout({
