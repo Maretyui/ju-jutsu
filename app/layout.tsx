@@ -84,6 +84,7 @@ const jsonLd = {
   name: SITE_TITLE,
   description: SITE_DESCRIPTION,
   sport: "Ju-Jutsu",
+  inLanguage: "de-DE",
 };
 
 export default function RootLayout({
