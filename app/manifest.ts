@@ -11,6 +11,11 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: "Ju-Jutsu Quickborn",
     description:
       "Ju-Jutsu Quickborn — Selbstverteidigung und Kampfsport für alle Altersgruppen.",
+    // Matches the de-DE language already declared on <html> in layout.tsx —
+    // spelled out here too since the manifest is fetched independently of
+    // the page and has no other way to know the language.
+    lang: "de",
+    dir: "ltr",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",
