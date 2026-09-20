@@ -85,6 +85,9 @@ const jsonLd = {
   description: SITE_DESCRIPTION,
   sport: "Ju-Jutsu",
   inLanguage: "de-DE",
+  // Safe to include even on this placeholder page — it's already the
+  // club's stated location in the name/copy, not unconfirmed contact data.
+  areaServed: "Quickborn",
 };
 
 export default function RootLayout({
