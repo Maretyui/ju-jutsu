@@ -56,8 +56,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  // Placeholder copy doesn't show a phone number, email, or address yet,
+  // so there's nothing legitimate for mobile browsers to auto-link —
+  // disable detection across the board instead of just telephone,
+  // matching sibling placeholder sites (e.g. ebs-abiball).
   formatDetection: {
     telephone: false,
+    email: false,
+    address: false,
   },
 };
 
