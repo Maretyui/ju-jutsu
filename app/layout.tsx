@@ -41,6 +41,12 @@ export const metadata: Metadata = {
   authors: [{ name: "Maik Reinhardt", url: "https://maretyui.com" }],
   creator: "Maik Reinhardt",
   robots: { index: true, follow: true },
+  // iOS Safari ignores manifest.ts's name/short_name for "Add to Home
+  // Screen" — it needs this dedicated meta tag for the pinned title.
+  appleWebApp: {
+    title: SITE_TITLE,
+    statusBarStyle: "default",
+  },
   openGraph: {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
