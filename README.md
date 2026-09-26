@@ -20,6 +20,7 @@ app/
 ├── layout.tsx    # <html> shell, fonts, metadata/OG/Twitter/viewport config
 ├── manifest.ts   # Web app manifest (name/icons/theme-color), served at /manifest.webmanifest
 ├── page.tsx      # Homepage content (currently the placeholder copy above)
+├── robots.ts     # Robots directives, served at /robots.txt
 ├── globals.css   # Tailwind import, color-scheme vars, focus-visible + reduced-motion baseline
 └── favicon.ico
 ```
