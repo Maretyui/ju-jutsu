@@ -17,14 +17,18 @@ The placeholder homepage copy lives in `app/page.tsx`; page title/description/ke
 
 ```
 app/
-├── layout.tsx    # <html> shell, fonts, metadata/OG/Twitter/viewport config
-├── manifest.ts   # Web app manifest (name/icons/theme-color), served at /manifest.webmanifest
-├── page.tsx      # Homepage content (currently the placeholder copy above)
-├── not-found.tsx # Custom 404 (own title, noindex) instead of inheriting the homepage's
-├── robots.ts     # Robots directives, served at /robots.txt
-├── globals.css   # Tailwind import, color-scheme vars, focus-visible + reduced-motion baseline
+├── layout.tsx          # <html> shell, fonts, metadata/OG/Twitter/viewport config
+├── manifest.ts         # Web app manifest (name/icons/theme-color), served at /manifest.webmanifest
+├── page.tsx            # Homepage content (currently the placeholder copy above)
+├── not-found.tsx       # Custom 404 (own title, noindex) instead of inheriting the homepage's
+├── error.tsx           # Custom runtime error UI, visually consistent with the rest of the site
+├── opengraph-image.tsx # 1200x630 share image generated at build time, used by layout.tsx's OG/Twitter metadata
+├── robots.ts           # Robots directives, served at /robots.txt
+├── globals.css         # Tailwind import, color-scheme vars, focus-visible + reduced-motion baseline
 └── favicon.ico
 ```
+
+`app/opengraph-image.tsx` generates the 1200x630 share image used by `layout.tsx`'s `openGraph`/`twitter` metadata — without it, links shared in group chats/Discord would unfurl with no image at all. Update its copy alongside `SITE_TITLE`/`SITE_DESCRIPTION` if the club's details change.
 
 `app/manifest.ts` backs up `layout.tsx`'s `applicationName` metadata with a real web manifest (Next.js auto-serves it at `/manifest.webmanifest` and links it in `<head>`) — update its `name`/`short_name`/`description` alongside the other metadata fields if the club's copy changes. Its `categories` field (`["sports", "health"]`) lets app stores/PWA installers categorize the site correctly. Its `id` field gives the manifest an explicit PWA identity independent of `start_url`, so an install isn't tied to whatever URL happens to be current and treated as a different app if that URL later changes.
 
