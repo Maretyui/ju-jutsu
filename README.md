@@ -23,6 +23,7 @@ app/
 ├── not-found.tsx       # Custom 404 (own title, noindex) instead of inheriting the homepage's
 ├── error.tsx           # Custom runtime error UI, visually consistent with the rest of the site
 ├── opengraph-image.tsx # 1200x630 share image generated at build time, used by layout.tsx's OG/Twitter metadata
+├── apple-icon.tsx      # 180x180 iOS home screen icon, backs layout.tsx's appleWebApp.title metadata
 ├── robots.ts           # Robots directives, served at /robots.txt
 ├── globals.css         # Tailwind import, color-scheme vars, focus-visible + reduced-motion baseline
 └── favicon.ico
@@ -32,7 +33,7 @@ app/
 
 `app/manifest.ts` backs up `layout.tsx`'s `applicationName` metadata with a real web manifest (Next.js auto-serves it at `/manifest.webmanifest` and links it in `<head>`) — update its `name`/`short_name`/`description` alongside the other metadata fields if the club's copy changes. Its `categories` field (`["sports", "health"]`) lets app stores/PWA installers categorize the site correctly. Its `id` field gives the manifest an explicit PWA identity independent of `start_url`, so an install isn't tied to whatever URL happens to be current and treated as a different app if that URL later changes.
 
-`app/layout.tsx`'s `appleWebApp.title` covers iOS Safari specifically, which ignores the web manifest's `name`/`short_name` for the "Add to Home Screen" pinned title — keep it in sync with `manifest.ts`'s `short_name` if either changes.
+`app/layout.tsx`'s `appleWebApp.title` covers iOS Safari specifically, which ignores the web manifest's `name`/`short_name` for the "Add to Home Screen" pinned title — keep it in sync with `manifest.ts`'s `short_name` if either changes. `app/apple-icon.tsx` generates the actual pinned icon that title is attached to; without it iOS falls back to a screenshot of the page instead of a real icon.
 
 `app/layout.tsx` also emits a small `SportsOrganization` JSON-LD block (a schema.org subtype of the generic `Organization` type, plus a `sport` field) so search engines have structured data to work with even before the real page content ships. It deliberately omits a `url` field until a confirmed live domain exists — add one alongside `metadataBase` at that point.
 
