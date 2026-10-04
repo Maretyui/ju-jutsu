@@ -35,7 +35,7 @@ export default function Home() {
           className="underline decoration-dotted underline-offset-2 hover:text-foreground/70"
         >
           Maik Reinhardt
-          <span className="sr-only"> (opens in a new tab)</span>
+          <span className="sr-only" lang="en"> (opens in a new tab)</span>
         </a>
       </footer>
     </div>
