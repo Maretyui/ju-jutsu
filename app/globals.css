@@ -54,3 +54,15 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* Matches the sibling kirchliche-pilgerplätze site: a thicker focus ring
+   and underline for visitors who've asked the OS for more contrast than
+   the default theme provides. */
+@media (prefers-contrast: more) {
+  :focus-visible {
+    outline-width: 3px;
+  }
+  a {
+    text-decoration-thickness: 2px;
+  }
+}
