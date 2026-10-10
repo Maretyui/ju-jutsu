@@ -31,6 +31,7 @@ export default function Error({
           Bitte versuche es erneut oder kehre zur Startseite zurück.
         </p>
         <button
+          type="button"
           onClick={() => reset()}
           className="rounded-sm text-sm underline decoration-dotted underline-offset-2 hover:text-foreground text-foreground/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current"
         >
