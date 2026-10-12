@@ -17,6 +17,10 @@ const geistMono = Geist_Mono({
 const SITE_TITLE = "Ju-Jutsu Quickborn";
 const SITE_DESCRIPTION =
   "Ju-Jutsu Quickborn — Selbstverteidigung und Kampfsport für alle Altersgruppen.";
+// Matches manifest.ts's short_name — iOS Safari's "Add to Home Screen"
+// pinned title ignores the web manifest and needs this dedicated field
+// instead, so it has to be kept in sync by hand.
+const SITE_SHORT_NAME = "Ju-Jutsu";
 
 // No metadataBase here (unlike sibling repos such as darkinvaderr/
 // kirchliche-pilgerplaetze) — this site has no confirmed live domain yet,
@@ -47,7 +51,7 @@ export const metadata: Metadata = {
   // iOS Safari ignores manifest.ts's name/short_name for "Add to Home
   // Screen" — it needs this dedicated meta tag for the pinned title.
   appleWebApp: {
-    title: SITE_TITLE,
+    title: SITE_SHORT_NAME,
     statusBarStyle: "default",
   },
   openGraph: {
