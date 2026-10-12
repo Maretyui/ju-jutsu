@@ -8,7 +8,10 @@ import type { MetadataRoute } from "next";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Ju-Jutsu Quickborn",
-    short_name: "Ju-Jutsu Quickborn",
+    // Shorter than `name` on purpose — this is what iOS truncates the
+    // pinned home screen icon label to, and "Ju-Jutsu Quickborn" doesn't
+    // fit without being cut off mid-word.
+    short_name: "Ju-Jutsu",
     description:
       "Ju-Jutsu Quickborn — Selbstverteidigung und Kampfsport für alle Altersgruppen.",
     // Matches the de-DE language already declared on <html> in layout.tsx —
