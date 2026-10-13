@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   // Used by browsers/OSes as the short display name when a user pins or
   // bookmarks the page (e.g. "Add to Home Screen"), separate from the
   // longer <title> text above.
-  applicationName: SITE_TITLE,
+  applicationName: SITE_SHORT_NAME,
   keywords: [
     "Ju-Jutsu Quickborn",
     "Ju-Jutsu",
