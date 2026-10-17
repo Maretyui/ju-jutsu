@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BuilderCredit from "@/components/builder-credit";
+import { SITE_TITLE } from "./layout";
 
 // Without this, the 404 page silently inherited the homepage's title
 // ("Ju-Jutsu Quickborn") from the root layout — indistinguishable from the
 // real homepage in a browser tab or search result snippet — and stayed
 // indexable, matching the fix already applied on sibling placeholder sites
-// (ebs-abiball, darkinvaderr).
+// (ebs-abiball, darkinvaderr). Reuses layout.tsx's SITE_TITLE instead of
+// repeating the club name as a literal, so it can't drift out of sync.
 export const metadata: Metadata = {
-  title: "Seite nicht gefunden | Ju-Jutsu Quickborn",
+  title: `Seite nicht gefunden | ${SITE_TITLE}`,
   robots: { index: false, follow: true },
-  openGraph: { title: "Seite nicht gefunden | Ju-Jutsu Quickborn" },
-  twitter: { title: "Seite nicht gefunden | Ju-Jutsu Quickborn" },
+  openGraph: { title: `Seite nicht gefunden | ${SITE_TITLE}` },
+  twitter: { title: `Seite nicht gefunden | ${SITE_TITLE}` },
 };
 
 // Next.js falls back to its own generic 404 UI without this file — this
