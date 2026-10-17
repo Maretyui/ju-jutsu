@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 // Kept as constants so the title/description can't drift out of sync
-// across the base, OpenGraph and Twitter metadata blocks below.
-const SITE_TITLE = "Ju-Jutsu Quickborn";
+// across the base, OpenGraph and Twitter metadata blocks below (and across
+// other pages, like not-found.tsx, that import SITE_TITLE from here).
+export const SITE_TITLE = "Ju-Jutsu Quickborn";
 const SITE_DESCRIPTION =
   "Ju-Jutsu Quickborn — Selbstverteidigung und Kampfsport für alle Altersgruppen.";
 // Matches manifest.ts's short_name — iOS Safari's "Add to Home Screen"
