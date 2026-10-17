@@ -11,11 +11,13 @@ Website for a Ju-Jutsu martial arts club in Quickborn — built with [Next.js](h
 
 ## Content
 
-The placeholder homepage copy lives in `app/page.tsx`; page title/description/keywords/OG/Twitter metadata lives in `app/layout.tsx`. Update both once training times, location and contact details are confirmed. `app/page.tsx` also renders a small "Design & Umsetzung" builder-credit footer linking to maretyui.com — keep it when the real page content replaces the placeholder copy.
+The placeholder homepage copy lives in `app/page.tsx`; page title/description/keywords/OG/Twitter metadata lives in `app/layout.tsx`. Update both once training times, location and contact details are confirmed. A small "Design & Umsetzung" builder-credit footer linking to maretyui.com lives in `components/builder-credit.tsx` and is rendered by `app/page.tsx`, `app/not-found.tsx` and `app/error.tsx` alike — keep it when the real page content replaces the placeholder copy.
 
 ## Project Structure
 
 ```
+components/
+└── builder-credit.tsx  # Shared "Design & Umsetzung" footer, used by page.tsx/not-found.tsx/error.tsx
 app/
 ├── layout.tsx          # <html> shell, fonts, metadata/OG/Twitter/viewport config
 ├── manifest.ts         # Web app manifest (name/icons/theme-color), served at /manifest.webmanifest
