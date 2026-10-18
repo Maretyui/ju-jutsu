@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import BuilderCredit from "@/components/builder-credit";
+import { textLinkClassName } from "@/lib/styles";
 
 // Next.js falls back to its own generic error UI without this file — this
 // keeps a runtime error at least visually consistent with the homepage and
@@ -46,14 +47,11 @@ export default function Error({
           <button
             type="button"
             onClick={() => reset()}
-            className="rounded-sm text-sm underline decoration-dotted underline-offset-2 hover:text-foreground text-foreground/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current"
+            className={textLinkClassName}
           >
             Erneut versuchen
           </button>
-          <Link
-            href="/"
-            className="rounded-sm text-sm underline decoration-dotted underline-offset-2 hover:text-foreground text-foreground/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current"
-          >
+          <Link href="/" className={textLinkClassName}>
             Zurück zur Startseite
           </Link>
         </div>

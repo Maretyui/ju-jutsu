@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import BuilderCredit from "@/components/builder-credit";
+import { textLinkClassName } from "@/lib/styles";
 import { SITE_TITLE } from "./layout";
 
 // Without this, the 404 page silently inherited the homepage's title
@@ -35,10 +36,7 @@ export default function NotFound() {
           Diese Seite gibt es nicht (mehr). Training, Standort und
           Ansprechpartner findest du auf der Startseite, sobald sie feststehen.
         </p>
-        <Link
-          href="/"
-          className="rounded-sm text-sm underline decoration-dotted underline-offset-2 hover:text-foreground text-foreground/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current"
-        >
+        <Link href="/" className={textLinkClassName}>
           Zurück zur Startseite
         </Link>
       </main>
