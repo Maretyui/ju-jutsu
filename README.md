@@ -18,6 +18,8 @@ The placeholder homepage copy lives in `app/page.tsx`; page title/description/ke
 ```
 components/
 └── builder-credit.tsx  # Shared "Design & Umsetzung" footer, used by page.tsx/not-found.tsx/error.tsx
+lib/
+└── styles.ts           # Shared className for not-found.tsx's/error.tsx's link and button
 app/
 ├── layout.tsx          # <html> shell, fonts, metadata/OG/Twitter/viewport config
 ├── manifest.ts         # Web app manifest (name/icons/theme-color), served at /manifest.webmanifest
@@ -36,7 +38,7 @@ app/
 
 `app/manifest.ts` backs up `layout.tsx`'s `applicationName` metadata with a real web manifest (Next.js auto-serves it at `/manifest.webmanifest` and links it in `<head>`) — update its `name`/`short_name`/`description` alongside the other metadata fields if the club's copy changes. Its `categories` field (`["sports", "health"]`) lets app stores/PWA installers categorize the site correctly. Its `id` field gives the manifest an explicit PWA identity independent of `start_url`, so an install isn't tied to whatever URL happens to be current and treated as a different app if that URL later changes.
 
-`app/layout.tsx`'s `appleWebApp.title` covers iOS Safari specifically, which ignores the web manifest's `name`/`short_name` for the "Add to Home Screen" pinned title — keep it in sync with `manifest.ts`'s `short_name` if either changes. `app/apple-icon.tsx` generates the actual pinned icon that title is attached to; without it iOS falls back to a screenshot of the page instead of a real icon. `app/icon.tsx` generates a matching 512x512 PNG for `manifest.ts`'s icon list — Chrome's install-prompt criteria require a real raster icon at 192x192 or larger, which `favicon.ico` alone doesn't satisfy.
+`app/layout.tsx`'s `appleWebApp.title` covers iOS Safari specifically, which ignores the web manifest's `name`/`short_name` for the "Add to Home Screen" pinned title — keep it in sync with `manifest.ts`'s `short_name` if either changes. `app/apple-icon.tsx` generates the actual pinned icon that title is attached to; without it iOS falls back to a screenshot of the page instead of a real icon. `app/icon.tsx` generates a matching 512x512 PNG for `manifest.ts`'s icon list — Chrome's install-prompt criteria require a real raster icon at 192x192 or larger, which `favicon.ico` alone doesn't satisfy. That PNG is listed twice in `manifest.ts`, once with `purpose: "any"` and once with `purpose: "maskable"` (the manifest type only accepts one purpose per entry) — the maskable copy lets Android's adaptive-icon system mask it into a circle/squircle/rounded square per device instead of letterboxing it, matching the fix already applied on ebs-abiball.
 
 `app/layout.tsx` also emits a small `SportsOrganization` JSON-LD block (a schema.org subtype of the generic `Organization` type, plus a `sport` field) so search engines have structured data to work with even before the real page content ships. It deliberately omits a `url` field until a confirmed live domain exists — add one alongside `metadataBase` at that point.
 

@@ -50,6 +50,19 @@ export default function manifest(): MetadataRoute.Manifest {
         type: "image/png",
         purpose: "any",
       },
+      // Separate entry (not combined into the one above - this manifest
+      // type only accepts a single purpose value per icon) so Android's
+      // adaptive-icon system can mask it into a circle/squircle/rounded
+      // square per device instead of letterboxing it, matching the fix
+      // already applied on ebs-abiball. Safe to reuse the same icon.tsx
+      // PNG as-is since its "JJ" mark is centered well inside the
+      // ~80%-diameter safe zone maskable icons are cropped to.
+      {
+        src: "/icon",
+        sizes: "512x512",
+        type: "image/png",
+        purpose: "maskable",
+      },
     ],
   };
 }
