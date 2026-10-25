@@ -7,7 +7,7 @@ export default function BuilderCredit() {
       <a
         href="https://maretyui.com"
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener noreferrer author"
         className="rounded-sm underline decoration-dotted underline-offset-2 hover:text-foreground/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current"
       >
         Maik Reinhardt
