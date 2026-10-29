@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { SITE_TITLE, SITE_SHORT_NAME, SITE_DESCRIPTION } from "./layout";
 
 // Backs up layout.tsx's `applicationName` metadata ("Add to Home Screen"
 // display name) with an actual web manifest, so mobile browsers have real
@@ -7,13 +8,12 @@ import type { MetadataRoute } from "next";
 // via this file-convention route, no changes needed elsewhere.
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Ju-Jutsu Quickborn",
+    name: SITE_TITLE,
     // Shorter than `name` on purpose — this is what iOS truncates the
     // pinned home screen icon label to, and "Ju-Jutsu Quickborn" doesn't
     // fit without being cut off mid-word.
-    short_name: "Ju-Jutsu",
-    description:
-      "Ju-Jutsu Quickborn — Selbstverteidigung und Kampfsport für alle Altersgruppen.",
+    short_name: SITE_SHORT_NAME,
+    description: SITE_DESCRIPTION,
     // Matches the de-DE language already declared on <html> in layout.tsx —
     // spelled out here too since the manifest is fetched independently of
     // the page and has no other way to know the language.
