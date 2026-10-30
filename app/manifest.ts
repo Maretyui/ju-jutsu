@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { SITE_TITLE, SITE_SHORT_NAME, SITE_DESCRIPTION } from "./layout";
+import { SITE_TITLE, SITE_SHORT_NAME, SITE_DESCRIPTION } from "@/lib/site";
 
 // Backs up layout.tsx's `applicationName` metadata ("Add to Home Screen"
 // display name) with an actual web manifest, so mobile browsers have real

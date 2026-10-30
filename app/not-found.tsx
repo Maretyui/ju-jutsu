@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BuilderCredit from "@/components/builder-credit";
 import { textLinkClassName } from "@/lib/styles";
-import { SITE_TITLE } from "./layout";
+import { SITE_TITLE } from "@/lib/site";
 
 // Without this, the 404 page silently inherited the homepage's title
 // ("Ju-Jutsu Quickborn") from the root layout — indistinguishable from the

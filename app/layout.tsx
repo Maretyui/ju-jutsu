@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_SHORT_NAME } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,18 +12,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-// Kept as constants so the title/description can't drift out of sync
-// across the base, OpenGraph and Twitter metadata blocks below (and across
-// other pages, like not-found.tsx, that import SITE_TITLE from here).
-export const SITE_TITLE = "Ju-Jutsu Quickborn";
-export const SITE_DESCRIPTION =
-  "Ju-Jutsu Quickborn — Selbstverteidigung und Kampfsport für alle Altersgruppen.";
-// Also imported by manifest.ts's short_name — iOS Safari's "Add to Home
-// Screen" pinned title ignores the web manifest and needs this dedicated
-// field instead, so both read from the same constant rather than two
-// hand-synced literals.
-export const SITE_SHORT_NAME = "Ju-Jutsu";
 
 // No metadataBase here (unlike sibling repos such as darkinvaderr/
 // kirchliche-pilgerplaetze) — this site has no confirmed live domain yet,
